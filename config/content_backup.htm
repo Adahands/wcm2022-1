@@ -31,10 +31,212 @@
 <p>Git: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p><h2>WCM</h2>
 <p>一般的 <a href="https://en.wikipedia.org/wiki/Web_content_management_system">WCM</a> 指的是 Web Content Management, 其中的 Web 特指 Web pages 也就是全球資訊網 (World Wide Web) 網站 (Website) 上的內容. 此類的 WCM 可以稱為<span style="text-decoration: underline;"><span style="background-color: #ffff99;">網頁內容管理</span></span>.</p>
 <p>而 Web-based Content Management 則指<span style="background-color: #ffff99;">基於全球資訊網相關技術的內容管理</span>, 其中的內容除了全球資訊網外, 還整合包含來自其他應用 Internet (TCP/IP) 架構的伺服器內容 (例如: <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a>, <a href="https://robodk.com">Robodk</a> 與 <a href="https://cyberbotics.com/">Webots</a> 伺服器, 或自建的機電資軟硬體虛實整合伺服器套件), 透過 Web-based 的架構整合在一個全球資訊網站中. 在此將 Web (and Internet) based Content Management 稱為<span style="text-decoration: underline;"><span style="background-color: #ffff99;">網際內容管理</span></span>.</p>
-<h2>Brython</h2><h1>Internet</h1>
+<h2>Brython</h2>
+<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a> <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> <a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Specifications">USA 國旗規格</a></p>
+<!-- 導入 brython 程式庫 -->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="/static/Cango-24v03-min.js"></script>
+<script src="/static/gearUtils-09.js"></script>
+<script src="/static/SVGpathUtils-6v03-min.js"></script>
+<script src="/static/sylvester.js"></script>
+<script src="/static/PrairieDraw.js"></script>
+</p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="procflag">PROC flag</button><button id="usaflag">USA flag</button><button id="drawgrid">Draw Grid</button><button id="grid_rect">Random Rect</button><button id="rect_walk">Rect Walk</button><button id="rect_u_walk">Rect U Walk</button><button id="rect_rev_u_walk">Rect rev U Walk</button><button id="sgcr">單節貪食蛇</button><button id="cfrr">5 個紅點方塊</button><button id="snake">Snake</button><button id="bsnake">BSnake</button></p>
+<p><!-- ######################  editor1 開始 ###################### --></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<!-- 這裡的畫布 id 為 brython_div -->
+<div id="brython_div"></div>
+<p><!-- ######################  editor1 結束 ###################### --></p>
+<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    # 注意這裡清除的畫布 id 為 brython_div
+    bd = doc["brython_div"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace2.editor.setValue(open(self.url).read())
+        Ace2.editor.scrollToRow(0)
+        Ace2.editor.gotoLine(0)
+        Ace2.run()
+
+add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
+add1to100 = button2(add1to100_url)
+doc["add1to100"].bind('click', add1to100.do)
+################################# p261 start 
+p261_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/980606effcd29635307d6474718cd4a7ef016747/p261.py"
+p261 = button2(p261_url)
+doc["p261"].bind('click', p261.do)
+################################## p261 end
+################################## rocflag start
+rocflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/03dd57e75b6b5be2b3d64c4fd15758e80cb9bf36/roc_flag.py"
+rocflag = button2(rocflag_url)
+doc["rocflag"].bind("click", rocflag.do)
+################################## rocflag end
+################################## procflag start
+procflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/03dd57e75b6b5be2b3d64c4fd15758e80cb9bf36/proc_flag.py"
+procflag = button2(procflag_url)
+doc["procflag"].bind("click", procflag.do)
+################################## rocflag end
+################################## drawgrid start
+drawgrid_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/070f424f2e9a99617009af216762163f66628e6d/draw_grid.py"
+drawgrid = button2(drawgrid_url)
+doc["drawgrid"].bind("click", drawgrid.do)
+################################## drawgrid end
+################################## grid_rect start
+grid_rect_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/f3683ed24646f63625b616e9cb8e61a9a08ae9be/draw_grid_random_rect.py"
+grid_rect = button2(grid_rect_url)
+doc["grid_rect"].bind("click", grid_rect.do)
+################################## grid_rect end
+################################## rect_walk start
+rect_walk_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/fdf9749488a59f00c2398aede8b6cbe8c0ed5d81/rect_walk.py"
+rect_walk = button2(rect_walk_url)
+doc["rect_walk"].bind("click", rect_walk.do)
+################################## rect_walk end
+################################## rect_walk start
+rect_u_walk_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/63645d3f5823fd22bdb02e840e46e551afee4087/rect_u_walk.py"
+rect_u_walk = button2(rect_u_walk_url)
+doc["rect_u_walk"].bind("click", rect_u_walk.do)
+################################## rect_walk end
+################################## rect_rev_u_walk start
+rect_rev_u_walk_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/165e7792091d4b91b9923592242bfaf28258a719/rect_rev_u_walk.py"
+rect_rev_u_walk = button2(rect_rev_u_walk_url)
+doc["rect_rev_u_walk"].bind("click", rect_rev_u_walk.do)
+################################## rect_rev_u_walk end
+################################## single green chasing red start
+sgcr_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/9f7c1cda3a51b061cde00d104054fb3ce19ffd1a/single_green_chasing_red.py"
+sgcr = button2(sgcr_url)
+doc["sgcr"].bind("click", sgcr.do)
+################################## single green chasing red end
+################################## chasing 5 red rect start
+# execute only one time
+#cfrr_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/c43844d62a0bd7eb6617d5222ba93b5de033a63f/chasing_5_red_rect.py"
+# continuously execution
+cfrr_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/7e0563617649a2532ed0fc903858e135cbcedcd0/chasing_5_red_rect.py"
+cfrr = button2(cfrr_url)
+doc["cfrr"].bind("click", cfrr.do)
+################################## chasing 5 red rect end
+################################## usaflag start
+usaflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/144b62fa07987d5ab6f369ae3661c645405e1872/usaflag.py"
+usaflag = button2(usaflag_url)
+doc["usaflag"].bind("click", usaflag.do)
+################################## usaflag end
+################################## snake start
+snake_url = "https://gist.githubusercontent.com/mdecourse/d55158478f4f8fcbfedd455f8be8c7b6/raw/f29309745a98687ed5c41cf90d28ef25a1e48dd4/snake_brython_div.py"
+snake = button2(snake_url)
+doc["snake"].bind("click", snake.do)
+################################## snake end
+################################## bsnake start
+bsnake_url = "https://gist.githubusercontent.com/mdecourse/2a8f213b6858a40481d17556c8a2fe86/raw/0a4a824493865dc7cf56977d03c9438d002b4268/kmlo_snakey.py"
+bsnake = button2(bsnake_url)
+doc["bsnake"].bind("click", bsnake.do)
+################################## bsnake end
+</script>
+</p><h2>Heroku</h2>
+<p>教務主機: <a href="https://qry.nfu.edu.tw/">https://qry.nfu.edu.tw/</a> (提供教務資料服務)</p>
+<p>Heroku: <a href="https://www.heroku.com/">https://www.heroku.com/</a> (提供執行網際 Python 服務)</p>
+<p>可以利用 Brython 直接從教務主機擷取資料嗎?</p>
+<p>假如需要透過 Python 模組或 C/C++ 動態連結程式庫執行 Brython, 可以透過 Brython + Heroku 完成嗎?</p>
+<h4>參考資料:</h4>
+<p style="padding-left: 30px;"><a href="http://mde.tw/wcm2021/content/Heroku-%E5%AF%A6%E4%BD%9C.html">Heroku 實作 </a></p>
+<p style="padding-left: 30px;"><a href="http://mde.tw/lab/content/Heroku.html">http://mde.tw/lab/content/Heroku.html</a> </p>
+<p style="padding-left: 30px;"><a href="http://mde.tw/cp2020/content/Heroku.html">http://mde.tw/cp2020/content/Heroku.html</a> </p>
+<p style="padding-left: 30px;"><a href="http://mde.tw/wcm2021/content/Heroku.html">http://mde.tw/wcm2021/content/Heroku.html</a> </p><h1>Internet</h1>
 <p>Inter-Networks</p>
-<p><a href="https://en.wikipedia.org/wiki/Internet">https://en.wikipedia.org/wiki/Internet</a></p>
-<h2>WWW</h2>
+<p><a href="https://en.wikipedia.org/wiki/Internet">https://en.wikipedia.org/wiki/Internet</a></p><h2>WWW</h2>
 <p>World Wide Web</p>
 <p><a href="https://en.wikipedia.org/wiki/World_Wide_Web">https://en.wikipedia.org/wiki/World_Wide_Web</a></p>
 <h2>HTML</h2>

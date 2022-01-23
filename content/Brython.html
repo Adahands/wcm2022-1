@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Github.html'>Github</a><li><a href='WCM.html'>WCM</a><li><a href='Brython.html'>Brython</a></li></ul><li class='has-children'><a href='Internet.html'>Internet</a><ul class='dropdown'><li><a href='WWW.html'>WWW</a><li><a href='HTML.html'>HTML</a><li><a href='TCPIP.html'>TCPIP</a></li></ul><li><a href='Windows.html'>Windows</a><li><a href='Ubuntu.html'>Ubuntu</a><li><a href='Git.html'>Git</a><li><a href='Fossil.html'>Fossil</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Github.html'>Github</a><li><a href='WCM.html'>WCM</a><li><a href='Brython.html'>Brython</a><li><a href='Heroku.html'>Heroku</a></li></ul><li class='has-children'><a href='Internet.html'>Internet</a><ul class='dropdown'><li><a href='WWW.html'>WWW</a><li><a href='HTML.html'>HTML</a><li><a href='TCPIP.html'>TCPIP</a></li></ul><li><a href='Windows.html'>Windows</a><li><a href='Ubuntu.html'>Ubuntu</a><li><a href='Git.html'>Git</a><li><a href='Fossil.html'>Fossil</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,10 +139,9 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">WCM << <a href='WCM.html'>Previous</a> <a href='Internet.html'>Next</a> >> Internet<br /><h1>Brython</h1>
-<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Specifications">USA 國旗規格</a></p>
+    <div id="tipue_search_content">WCM << <a href='WCM.html'>Previous</a> <a href='Heroku.html'>Next</a> >> Heroku<br /><h1>Brython</h1>
+<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a> <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> <a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Specifications">USA 國旗規格</a></p>
+<p><a href="https://gist.github.com/mdecourse/05930b1775b77293523b59b1bbb43e57">Gist Brython scripts</a></p>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -181,7 +180,7 @@ function doSave(storage_id, filename){
 <script src="./../cmsimde/static/sylvester.js"></script>
 <script src="./../cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="procflag">PROC flag</button><button id="usaflag">USA flag</button><button id="drawgrid">Draw Grid</button><button id="grid_rect">Random Rect</button><button id="rect_walk">Rect Walk</button><button id="rect_u_walk">Rect U Walk</button><button id="rect_rev_u_walk">Rect rev U Walk</button><button id="sgcr">單節貪食蛇</button><button id="cfrr">5 個紅點方塊</button></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="procflag">PROC flag</button><button id="usaflag">USA flag</button><button id="drawgrid">Draw Grid</button><button id="grid_rect">Random Rect</button><button id="rect_walk">Rect Walk</button><button id="rect_u_walk">Rect U Walk</button><button id="rect_rev_u_walk">Rect rev U Walk</button><button id="sgcr">單節貪食蛇</button><button id="cfrr">5 個紅點方塊</button><button id="snake">Snake</button><button id="bsnake">BSnake</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -324,8 +323,18 @@ usaflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dba
 usaflag = button2(usaflag_url)
 doc["usaflag"].bind("click", usaflag.do)
 ################################## usaflag end
+################################## snake start
+snake_url = "https://gist.githubusercontent.com/mdecourse/d55158478f4f8fcbfedd455f8be8c7b6/raw/f29309745a98687ed5c41cf90d28ef25a1e48dd4/snake_brython_div.py"
+snake = button2(snake_url)
+doc["snake"].bind("click", snake.do)
+################################## snake end
+################################## bsnake start
+bsnake_url = "https://gist.githubusercontent.com/mdecourse/2a8f213b6858a40481d17556c8a2fe86/raw/0a4a824493865dc7cf56977d03c9438d002b4268/kmlo_snakey.py"
+bsnake = button2(bsnake_url)
+doc["bsnake"].bind("click", bsnake.do)
+################################## bsnake end
 </script>
-</p><br />WCM << <a href='WCM.html'>Previous</a> <a href='Internet.html'>Next</a> >> Internet</div>
+</p><br />WCM << <a href='WCM.html'>Previous</a> <a href='Heroku.html'>Next</a> >> Heroku</div>
         
     <!-- footer -->
       <div class="container">
