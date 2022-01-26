@@ -2,7 +2,7 @@
         <head>
         <title>wcm2022</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -139,10 +139,31 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Internet << <a href='Internet.html'>Previous</a> <a href='HTML.html'>Next</a> >> HTML<br /><h1>WWW</h1>
-<p>World Wide Web</p>
-<p><a href="https://en.wikipedia.org/wiki/World_Wide_Web">https://en.wikipedia.org/wiki/World_Wide_Web</a></p>
-<br />Internet << <a href='Internet.html'>Previous</a> <a href='HTML.html'>Next</a> >> HTML</div>
+    <div id="tipue_search_content">Heroku << <a href='Heroku.html'>Previous</a> <a href='Internet.html'>Next</a> >> Internet<br /><h1>Programming</h1>
+<h4><a href="https://github.com/mdecourse/wcm2022/discussions/5#discussion-3797589">計算機程式的教與學</a>:</h4>
+<p>利用 <a href="http://mde.tw/wcm2022/content/Brython.html">Brython 程式範例</a>可以讓計算機程式課程的學習者, 直接利用瀏覽器與 <a href="https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists">Github Gist</a> 練習程式編寫.</p>
+<p>其中 <a href="https://brython.info/">Brython 程式語法</a>可以與 Javascript 程式庫結合應用 (例如: <a href="https://www.arc.id.au/CanvasGraphics.html">Cango</a>, <a href="https://pixijs.com/">PixiJS</a>, <a href="https://konvajs.org/">KonvaJS</a>), 且能透過 <a href="https://brython.info/static_doc/en/ajax.html">AJAX</a> 與 Flask 伺服器端的 Python 或 C/C++ dll <a href="https://mde.tw/cp2021_hw/content/Tiny%20C.html">結合應用</a>.</p>
+<h4><a href="http://mde.tw/wcm2022/content/Brython.html">Brython 程式範例</a>的延伸教學:</h4>
+<h4><a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/7e0563617649a2532ed0fc903858e135cbcedcd0/chasing_5_red_rect.py">五個紅點方塊</a>:</h4>
+<p style="padding-left: 30px;">1. <a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/7e0563617649a2532ed0fc903858e135cbcedcd0/chasing_5_red_rect.py">五個紅點方塊</a>以隨機方式產生時, 會隨機標上 1~5 的代號, 綠色方塊必須依照順序, 分別採最短距離"吃掉" 標號 1~5 的紅色方塊.</p>
+<p style="padding-left: 30px;">2. 承接上一題, 當綠色方塊分別按照順序"吃掉"各紅色方塊過程, 必須避開非目標編號的其他紅色方塊.</p>
+<p style="padding-left: 30px;">3. 承接上一題, 在畫面中列出綠色方塊每走一步即增量行走步數的 counter, 以及計算"吃掉"紅色方塊總數.</p>
+<p style="padding-left: 30px;">4. 承接上一題, 在畫面中以隨機方式產生五個藍色方塊, 並將所產生過的所有藍色方塊當作障礙的情況下, 執行上一個題目要求過程五個回合.</p>
+<h4>延伸討論:</h4>
+<p style="padding-left: 30px;">如何利用控制<a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/7e0563617649a2532ed0fc903858e135cbcedcd0/chasing_5_red_rect.py">五個紅點方塊</a>的程式, 轉而控制 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 機電模擬場景中的掃地機 (<a href="https://en.wikipedia.org/wiki/Robotic_vacuum_cleaner">Robotic Vacuum Cleaner</a>).</p>
+<p style="padding-left: 60px;">1. Brython 控制程式以 <a href="https://brython.info/static_doc/en/ajax.html">AJAX</a> 將控制訊號傳至 Server 端後, 以 <a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">Python Remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/b0RemoteApiOverview.htm">Bluezero-based Remote API</a> 控制機電場景中的掃地機.</p>
+<p style="padding-left: 60px;">2. 將 Brython 控制方法轉為 CPython, 以 <a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">Python Remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/b0RemoteApiOverview.htm">Bluezero-based Remote API</a> 控制機電場景中的掃地機.</p>
+<p style="padding-left: 30px;">如何將 <a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/cango_three_gears.py">Cango_three_gears</a> 程式延伸, 利用 <a href="https://drive.google.com/file/d/17wDJd6AeMhwrOzWGO_o8afCEsFKh3Hy9/view">NX1980 portable</a> (for @gm users only) 建立 3D 正齒輪, 並轉入 CoppeliaSim 建立傳動模擬場景.</p>
+<hr/>
+<h4>CoppeliaSim:</h4>
+<p>CoppeliaSim Edu may ONLY be used by educational entities composed by following people and institutions:</p>
+<p style="padding-left: 30px;">students, teachers and professors<br/>schools and universities</p>
+<p>Educational entities do NOT include companies, research institutions, non-profit organisations, foundations, etc.</p>
+<p>An educational entity may use CoppeliaSim Edu under following conditions:</p>
+<p style="padding-left: 30px;">usage should be non-commercial</p>
+<p>cd2022 downloads are provided by cd2022 At mde</p>
+<p><a href="https://drive.google.com/file/d/1ZkKa4rl0fsmqsMWegPWjSVUW__9PQ3yh/view?usp=sharing">CoppeliaSim Edu 4.1.0 Portable</a> (official and self-compiled versions)</p>
+<p><a href="https://drive.google.com/file/d/16tiFBeeV3OEwomioM9MQxQIUJwEyzcQy/view?usp=sharing">CoppeliaSim Edu 4.2.0 Portable</a> (official version)</p><br />Heroku << <a href='Heroku.html'>Previous</a> <a href='Internet.html'>Next</a> >> Internet</div>
         
     <!-- footer -->
       <div class="container">
