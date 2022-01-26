@@ -457,10 +457,10 @@ doc["fibo"].bind("click", fibo.do)
 <p style="padding-left: 30px;"><a href="http://mde.tw/lab/content/Heroku.html">http://mde.tw/lab/content/Heroku.html</a></p>
 <p style="padding-left: 30px;"><a href="http://mde.tw/cp2020/content/Heroku.html">http://mde.tw/cp2020/content/Heroku.html</a></p>
 <p style="padding-left: 30px;"><a href="http://mde.tw/wcm2021/content/Heroku.html">http://mde.tw/wcm2021/content/Heroku.html</a></p><h1>Programming</h1>
-<p><a href="https://github.com/mdecourse/wcm2022/discussions/5#discussion-3797589">計算機程式的教與學</a></p>
+<h4><a href="https://github.com/mdecourse/wcm2022/discussions/5#discussion-3797589">計算機程式的教與學</a>:</h4>
 <p>利用 <a href="http://mde.tw/wcm2022/content/Brython.html">Brython 程式範例</a>可以讓計算機程式課程的學習者, 直接利用瀏覽器與 <a href="https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists">Github Gist</a> 練習程式編寫.</p>
 <p>其中 <a href="https://brython.info/">Brython 程式語法</a>可以與 Javascript 程式庫結合應用 (例如: <a href="https://www.arc.id.au/CanvasGraphics.html">Cango</a>, <a href="https://pixijs.com/">PixiJS</a>, <a href="https://konvajs.org/">KonvaJS</a>), 且能透過 <a href="https://brython.info/static_doc/en/ajax.html">AJAX</a> 與 Flask 伺服器端的 Python 或 C/C++ dll <a href="https://mde.tw/cp2021_hw/content/Tiny%20C.html">結合應用</a>.</p>
-<p><a href="http://mde.tw/wcm2022/content/Brython.html">Brython 程式範例</a>的延伸教學:</p>
+<h4><a href="http://mde.tw/wcm2022/content/Brython.html">Brython 程式範例</a>的延伸教學:</h4>
 <h4><a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/7e0563617649a2532ed0fc903858e135cbcedcd0/chasing_5_red_rect.py">五個紅點方塊</a>:</h4>
 <p style="padding-left: 30px;">1. <a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/7e0563617649a2532ed0fc903858e135cbcedcd0/chasing_5_red_rect.py">五個紅點方塊</a>以隨機方式產生時, 會隨機標上 1~5 的代號, 綠色方塊必須依照順序, 分別採最短距離"吃掉" 標號 1~5 的紅色方塊.</p>
 <p style="padding-left: 30px;">2. 承接上一題, 當綠色方塊分別按照順序"吃掉"各紅色方塊過程, 必須避開非目標編號的其他紅色方塊.</p>
@@ -471,6 +471,8 @@ doc["fibo"].bind("click", fibo.do)
 <p style="padding-left: 60px;">1. Brython 控制程式以 <a href="https://brython.info/static_doc/en/ajax.html">AJAX</a> 將控制訊號傳至 Server 端後, 以 <a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">Python Remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/b0RemoteApiOverview.htm">Bluezero-based Remote API</a> 控制機電場景中的掃地機.</p>
 <p style="padding-left: 60px;">2. 將 Brython 控制方法轉為 CPython, 以 <a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">Python Remote API</a> 或 <a href="https://www.coppeliarobotics.com/helpFiles/en/b0RemoteApiOverview.htm">Bluezero-based Remote API</a> 控制機電場景中的掃地機.</p>
 <p style="padding-left: 30px;">如何將 <a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/cango_three_gears.py">Cango_three_gears</a> 程式延伸, 利用 <a href="https://drive.google.com/file/d/17wDJd6AeMhwrOzWGO_o8afCEsFKh3Hy9/view">NX1980 portable</a> (for @gm users only) 建立 3D 正齒輪, 並轉入 CoppeliaSim 建立傳動模擬場景.</p>
+<p style="padding-left: 60px;">在 <a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/cango_three_gears.py">Cango_three_gears</a> 程式中分別加入三個正齒輪的齒數表單, 可以讓使用者輸入各齒輪的齒數送出後, 在畫布中產生齒輪傳動模擬.</p>
+<p style="padding-left: 60px;">將 <a href="https://mde.tw/wcm2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/cango_three_gears.py">Cango_three_gears</a> 程式與 <a href="http://mde.tw/cad2020/content/HW1_NX.html">NX Python API 程式</a>結合, 讓使用者透過網際表單訂製並取得各種格式的正齒輪零件檔案.</p>
 <hr/>
 <h4>CoppeliaSim:</h4>
 <p>CoppeliaSim Edu may ONLY be used by educational entities composed by following people and institutions:</p>
