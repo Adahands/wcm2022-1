@@ -103,7 +103,7 @@ function doSave(storage_id, filename){
 }
 </script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="procflag">PROC flag</button><button id="usaflag">USA flag</button><button id="drawgrid">Draw Grid</button><button id="grid_rect">Random Rect</button><button id="rect_walk">Rect Walk</button><button id="rect_u_walk">Rect U Walk</button><button id="rect_rev_u_walk">Rect rev U Walk</button><button id="sgcr">單節貪食蛇</button><button id="cfrr">5 個紅點方塊</button><button id="snake">Snake</button><button id="bsnake">BSnake</button><button id="auto_guess">auto_guess</button><button id="ball">ball</button><button id="bezier">bezier</button><button id="big_lotto">big_lotto</button><button id="brython_kw">brython_kw</button><button id="bunny">bunny</button><button id="cango_spur">cango_spur</button><button id="cango_spur1">cango_spur1</button><button id="cango_three_gears">cango_three_gears</button><button id="clear">clear</button><button id="clock">clock</button><button id="convert_temp">convert_temp</button><button id="display_stl">display_stl</button><button id="draw">draw</button><button id="ex1">ex1</button><button id="ex2">ex2</button><button id="ex3">ex3</button><button id="ex4">ex4</button><button id="fibo">fibo</button><button id="fourbar">fourbar</button><button id="guess_a_number">guess_a_number</button><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button><button id="knova1">knova1</button><button id="power_lotto">power_lotto</button><button id="spur">spur</button><button id="spur_w_form">spur_w_form</button><button id="stl_binary_ascii">stl_binary_ascii</button><button id="stl_writer">stl_writer</button><button id="turtle1">turtle1</button><button id="turtle2">turtle2</button><button id="turtle3">turtle3</button><button id="turtle4">turtle4</button><button id="turtle5">turtle5</button><button id="turtle6">turtle6</button><button id="turtle7">turtle7</button><button id="turtle8">turtle8</button><button id="twl_link_ik">twl_link_ik</button><button id="webcam">webcam</button><button id="ycqsort">ycqsort</button></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="procflag">PROC flag</button><button id="usaflag">USA flag</button><button id="drawgrid">Draw Grid</button><button id="grid_rect">Random Rect</button><button id="rect_walk">Rect Walk</button><button id="rect_u_walk">Rect U Walk</button><button id="rect_rev_u_walk">Rect rev U Walk</button><button id="sgcr">單節貪食蛇</button><button id="cfrr">5 個紅點方塊</button><button id="snake">Snake</button><button id="bsnake">BSnake</button><button id="auto_guess">auto_guess</button><button id="ball">ball</button><button id="bezier">bezier</button><button id="big_lotto">big_lotto</button><button id="brython_kw">brython_kw</button><button id="bunny">bunny</button><button id="cango_spur">cango_spur</button><button id="cango_spur1">cango_spur1</button><button id="cango_three_gears">cango_three_gears</button><button id="clear">clear</button><button id="clock">clock</button><button id="convert_temp">convert_temp</button><button id="deepmerge">deepmerge</button><button id="display_stl">display_stl</button><button id="draw">draw</button><button id="ex1">ex1</button><button id="ex2">ex2</button><button id="ex3">ex3</button><button id="ex4">ex4</button><button id="fibo">fibo</button><button id="fourbar">fourbar</button><button id="guess_a_number">guess_a_number</button><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button><button id="knova1">knova1</button><button id="merge3">merge3</button><button id="power_lotto">power_lotto</button><button id="spur">spur</button><button id="spur_w_form">spur_w_form</button><button id="stl_binary_ascii">stl_binary_ascii</button><button id="stl_writer">stl_writer</button><button id="turtle1">turtle1</button><button id="turtle2">turtle2</button><button id="turtle3">turtle3</button><button id="turtle4">turtle4</button><button id="turtle5">turtle5</button><button id="turtle6">turtle6</button><button id="turtle7">turtle7</button><button id="turtle8">turtle8</button><button id="twl_link_ik">twl_link_ik</button><button id="webcam">webcam</button><button id="ycqsort">ycqsort</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -457,7 +457,17 @@ doc["ycqsort"].bind("click", ycqsort.do)
 fibo_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/fa232853da824f6dd5ae1f61a96543e6106c04b5/fibo_ex.py"
 fibo = button2(fibo_url)
 doc["fibo"].bind("click", fibo.do)
-################################## ycqsort end
+################################## fibo end
+################################## deepmerge start
+deepmerge_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/e89e0f978a015bf9361270a389a5b84e6244ed5b/deepmerge.py"
+deepmerge = button2(deepmerge_url)
+doc["deepmerge"].bind("click", deepmerge.do)
+################################## deepmerge end
+################################## merge3 start
+merge3_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/8a7452a451e57e4de720f22fc2fc8abd6aac0bc8/merge3.py"
+merge3 = button2(merge3_url)
+doc["merge3"].bind("click", merge3.do)
+################################## merge3 end
 </script>
 </p><h3>ggame</h3>
 <p><a href="https://github.com/mdecourse/ggame">ggame</a> 執行需要 downloads/brython_modules.js 與</p>
@@ -478,6 +488,11 @@ doc["fibo"].bind("click", fibo.do)
 <p><a href="https://mde.tw/cp2021/content/%E5%AD%B8%E7%BF%92%E7%A8%8B%E5%BC%8F.html">學習程式</a></p>
 <p><a href="https://www.indiatoday.in/education-today/featurephilia/story/why-computer-programming-or-coding-is-so-important-for-students-in-today-s-era-1789171-2021-04-09">why-computer-programming-or-coding-is-so-important-for-students-in-today-s-era</a>?</p>
 <p><a href="https://www.rasmussen.edu/degrees/technology/blog/why-learn-to-code/">why learn to code</a>?</p>
+<p><a href="https://time.com/2881453/programming-in-schools/">https://time.com/2881453/programming-in-schools/</a></p>
+<p><a href="https://digitalskillsglobal.com/blog/10-reasons-why-coding-skills-are-vital-for-organisations-worldwide">https://digitalskillsglobal.com/blog/10-reasons-why-coding-skills-are-vital-for-organisations-worldwide</a> </p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/kgicuytCkoY" title="YouTube video player" width="560"></iframe></p>
+<p>(program or be programmed)</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/imV3pPIUy1k" title="YouTube video player" width="560"></iframe></p>
 <p>利用 <a href="http://mde.tw/wcm2022/content/Brython.html">Brython 程式範例</a>可以讓計算機程式課程的學習者, 直接利用瀏覽器與 <a href="https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists">Github Gist</a> 練習程式編寫.</p>
 <p>其中 <a href="https://brython.info/">Brython 程式語法</a>可以與 Javascript 程式庫結合應用 (例如: <a href="https://www.arc.id.au/CanvasGraphics.html">Cango</a>, <a href="https://pixijs.com/">PixiJS</a>, <a href="https://konvajs.org/">KonvaJS</a>), 且能透過 <a href="https://brython.info/static_doc/en/ajax.html">AJAX</a> 與 Flask 伺服器端的 Python 或 C/C++ dll <a href="https://mde.tw/cp2021_hw/content/Tiny%20C.html">結合應用</a>.</p>
 <h4><a href="http://mde.tw/wcm2022/content/Brython.html">Brython 程式範例</a>的延伸教學:</h4>
@@ -516,8 +531,9 @@ doc["fibo"].bind("click", fibo.do)
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/M8-WFTjZoA0" title="YouTube video player" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ZLjl_55um4I" title="YouTube video player" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/hy0ePbpna5Y" title="YouTube video player" width="560"></iframe></p>
+<p><a href="https://github.com/mdecourse/conclave">https://github.com/mdecourse/conclave</a> </p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/jIR0Ngov7vo" title="YouTube video player" width="560"></iframe></p>
-<p><a href="https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html">https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html</a> </p><h1>Internet</h1>
+<p><a href="https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html">https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html</a></p><h1>Internet</h1>
 <p>Inter-Networks</p>
 <p><a href="https://en.wikipedia.org/wiki/Internet">https://en.wikipedia.org/wiki/Internet</a></p>
 <p>回到 1997 年, <a href="https://en.wikipedia.org/wiki/Google">Google</a> 成立的前一年, 看看 <a href="https://link.springer.com/book/10.1007/978-1-349-14456-3">Mastering the Internet</a> (1) 這本電子書, 了解與網際網路相關的各項術語與相關內容.</p>
