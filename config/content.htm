@@ -536,9 +536,94 @@ doc["websocket"].bind("click", websocket.do)
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/M8-WFTjZoA0" title="YouTube video player" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ZLjl_55um4I" title="YouTube video player" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/hy0ePbpna5Y" title="YouTube video player" width="560"></iframe></p>
-<p><a href="https://github.com/mdecourse/conclave">https://github.com/mdecourse/conclave</a> </p>
+<p><a href="https://github.com/mdecourse/conclave">https://github.com/mdecourse/conclave</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/jIR0Ngov7vo" title="YouTube video player" width="560"></iframe></p>
-<p><a href="https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html">https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html</a></p><h1>Internet</h1>
+<p><a href="https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html">https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html</a></p>
+<h2>Rust</h2>
+<p><a href="https://mde.tw/cp2021/content/Rust.html">https://mde.tw/cp2021/content/Rust.html</a></p>
+<p>從<a href="http://mde.tw/cmstemplate/content/%E5%8F%AF%E6%94%9C%E7%B3%BB%E7%B5%B1.html">可攜系統</a>下載 1.53.0 後, 以 rustup update 更新.</p>
+<p>更新後以 rustc --version 查詢目前的版本.</p>
+<p>下載 <a href="https://drive.google.com/file/d/1ArI6h4I8Y6qU0bu7hluw3CDlBZFMHYED/view?usp=sharing">Rust_1.58.1_portable.7z</a> (218 MB, 解開壓縮後 1.8 GB)</p>
+<p>可配合</p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-3468-6">Beginning Rust</a></p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-5599-5">Practical Rust Projects</a></p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-5121-8">Practical Machine Learning with Rust</a></p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-6589-5">Practical Rust Web Projects</a></p>
+<p>等電子書學習.</p>
+<p>main.rs</p>
+<pre class="brush:rust;auto-links:false;toolbar:false" contenteditable="false">fn main() {
+    for i in 1..11 {
+        print!("第 {} 次說 {}!\n", i, "Hello, world");
+    }
+}</pre>
+<p>rs.bat</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">@echo off
+cls
+rustc %* --color always 2&gt;&amp;1 |</pre>
+<p>利用 rs main.rs 可以編譯出 main.exe</p>
+<p>If it is compiled and run as before, it prints: "Hello, world!"</p>
+<p>Notice that the newly added line contains eight syntax items, aka “tokens”. Let’s examine them:</p>
+<ol>
+<li>print: It is the name of a macro defined in the Rust standard library.</li>
+<li>!: It specifies that the preceding name indicates a macro. Without<br/>such a symbol, print would instead indicate a function. There is no<br/>such function in the Rust standard library, and so you would get a<br/>compilation error. A macro is a thing similar to a function - it’s some<br/>Rust code to which a name is associated. By using this name, you ask<br/>to insert such code in this point.</li>
+<li>(: It starts the list of arguments of the macro.</li>
+<li>": it starts the literal string.</li>
+<li>Hello, world!: It is the content of the literal string.</li>
+<li>": It ends the literal string.</li>
+<li>): It ends the list of the arguments of the macro.</li>
+<li>;: It ends the statement.</li>
+</ol>
+<p>Python call Rust generated dll:</p>
+<h4>參考:</h4>
+<p style="padding-left: 30px;"><a href="https://bheisler.github.io/post/calling-rust-in-python/">https://bheisler.github.io/post/calling-rust-in-python/</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/raytracer">https://github.com/mdecourse/raytracer</a></p>
+<p>也可以透過 PyO3: <a href="http://saidvandeklundert.net/learn/2021-11-18-calling-rust-from-python-using-pyo3/">http://saidvandeklundert.net/learn/2021-11-18-calling-rust-from-python-using-pyo3/</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/PyO3/pyo3">https://github.com/PyO3/pyo3</a> </p>
+<h4><a href="https://bheisler.github.io/post/calling-rust-in-python/">透過 C</a>:</h4>
+<p>利用 cargo new rust_python 建立 rust_python 目錄及專案檔案內容.</p>
+<p>rust_python 目錄檔案:</p>
+<p style="padding-left: 30px;">.git</p>
+<p style="padding-left: 30px;">src 目錄</p>
+<p style="padding-left: 30px;">.gitignore</p>
+<p style="padding-left: 30px;">Cargo.toml</p>
+<p>Cargo.toml</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">[package]
+name = "rust_python"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "square"
+crate-type = ["dylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]</pre>
+<p>src\lib.rs</p>
+<pre class="brush:rust;auto-links:false;toolbar:false" contenteditable="false">#[no_mangle]
+pub extern "C" fn square(x: i32) -&gt; i32 {
+    x*x
+}</pre>
+<p>編譯 square.dll</p>
+<p>進入 rust_python 目錄後, 執行 cargo build</p>
+<p>call_rust.py</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import cffi
+
+ffi = cffi.FFI()
+s = 'int square(int);'
+ffi.cdef(s)
+C = ffi.dlopen("./rust_python/target/debug/square.dll")
+
+print(C.square(9))</pre>
+<p>執行 call_rust.py 後得到 81.</p><h3>cmsrmde</h3>
+<p>利用</p>
+<p><a href="https://docs.rs/soup/latest/soup/">https://docs.rs/soup/latest/soup/</a> 類似 Python 的 beautifulsoup.</p>
+<p>Rust 的 <a href="https://stackoverflow.com/questions/26643688/how-do-i-split-a-string-in-rust">split</a>.</p>
+<p>可以試著對 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 分頁.</p>
+<p><a href="https://github.com/xi-editor/xi-editor">https://github.com/xi-editor/xi-editor</a> 可作為文字檔案編輯器.</p>
+<p>SciTE 可以利用 <a href="https://fossies.org/linux/gscite/rust.properties">https://fossies.org/linux/gscite/rust.properties</a> 納入對於 Rust 的支持.</p>
+<p>Flask 的部分可以改用 Web Framework: <a href="https://github.com/actix/actix-web">https://github.com/actix/actix-web</a></p>
+<p></p><h1>Internet</h1>
 <p>Inter-Networks</p>
 <p><a href="https://en.wikipedia.org/wiki/Internet">https://en.wikipedia.org/wiki/Internet</a></p>
 <p>回到 1997 年, <a href="https://en.wikipedia.org/wiki/Google">Google</a> 成立的前一年, 看看 <a href="https://link.springer.com/book/10.1007/978-1-349-14456-3">Mastering the Internet</a> (1) 這本電子書, 了解與網際網路相關的各項術語與相關內容.</p>
