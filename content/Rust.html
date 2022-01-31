@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Github.html'>Github</a><li><a href='WCM.html'>WCM</a><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='ggame.html'>ggame</a></li></ul><li><a href='Heroku.html'>Heroku</a></li></ul><li class='has-children'><a href='Programming.html'>Programming</a><ul class='dropdown'><li><a href='Project2.html'>Project2</a><li><a href='Project3.html'>Project3</a><li class='has-children'><a href='Rust.html'>Rust</a><ul class='dropdown'><li><a href='cmsrmde.html'>cmsrmde</a></li></li></ul></ul><li class='has-children'><a href='Internet.html'>Internet</a><ul class='dropdown'><li><a href='WWW.html'>WWW</a><li><a href='HTML.html'>HTML</a><li><a href='TCPIP.html'>TCPIP</a></li></ul><li><a href='Windows.html'>Windows</a><li><a href='Ubuntu.html'>Ubuntu</a><li class='has-children'><a href='Git.html'>Git</a><ul class='dropdown'><li><a href='Project1.html'>Project1</a></li></ul><li><a href='Fossil.html'>Fossil</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Github.html'>Github</a><li><a href='WCM.html'>WCM</a><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='ggame.html'>ggame</a></li></ul><li><a href='Heroku.html'>Heroku</a></li></ul><li class='has-children'><a href='Programming.html'>Programming</a><ul class='dropdown'><li><a href='Project2.html'>Project2</a><li><a href='Project3.html'>Project3</a><li class='has-children'><a href='Rust.html'>Rust</a><ul class='dropdown'><li><a href='cmsrmde.html'>cmsrmde</a></li></li></ul></ul><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li class='has-children'><a href='Internet.html'>Internet</a><ul class='dropdown'><li><a href='WWW.html'>WWW</a><li><a href='HTML.html'>HTML</a><li><a href='TCPIP.html'>TCPIP</a></li></ul><li><a href='Windows.html'>Windows</a><li><a href='Ubuntu.html'>Ubuntu</a><li class='has-children'><a href='Git.html'>Git</a><ul class='dropdown'><li><a href='Project1.html'>Project1</a></li></ul><li><a href='Fossil.html'>Fossil</a></li></ul><li><a href='Collaboration.html'>Collaboration</a></li>
                       </ul>
                 </nav>
               </div>
@@ -175,10 +175,10 @@ rustc %* --color always 2&gt;&amp;1 |</pre>
 </ol>
 <p>Python call Rust generated dll:</p>
 <h4>參考:</h4>
-<p style="padding-left: 30px;"><a href="https://bheisler.github.io/post/calling-rust-in-python/">https://bheisler.github.io/post/calling-rust-in-python/</a> </p>
+<p style="padding-left: 30px;"><a href="https://bheisler.github.io/post/calling-rust-in-python/">https://bheisler.github.io/post/calling-rust-in-python/</a></p>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecourse/raytracer">https://github.com/mdecourse/raytracer</a></p>
 <p>也可以透過 PyO3: <a href="http://saidvandeklundert.net/learn/2021-11-18-calling-rust-from-python-using-pyo3/">http://saidvandeklundert.net/learn/2021-11-18-calling-rust-from-python-using-pyo3/</a></p>
-<p style="padding-left: 30px;"><a href="https://github.com/PyO3/pyo3">https://github.com/PyO3/pyo3</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/PyO3/pyo3">https://github.com/PyO3/pyo3</a></p>
 <h4><a href="https://bheisler.github.io/post/calling-rust-in-python/">透過 C</a>:</h4>
 <p>利用 cargo new rust_python 建立 rust_python 目錄及專案檔案內容.</p>
 <p>rust_python 目錄檔案:</p>
@@ -215,7 +215,8 @@ ffi.cdef(s)
 C = ffi.dlopen("./rust_python/target/debug/square.dll")
 
 print(C.square(9))</pre>
-<p>執行 call_rust.py 後得到 81.</p><br />Project3 << <a href='Project3.html'>Previous</a> <a href='cmsrmde.html'>Next</a> >> cmsrmde</div>
+<p>執行 call_rust.py 後得到 81.</p>
+<br />Project3 << <a href='Project3.html'>Previous</a> <a href='cmsrmde.html'>Next</a> >> cmsrmde</div>
         
     <!-- footer -->
       <div class="container">
