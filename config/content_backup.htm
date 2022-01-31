@@ -9,7 +9,8 @@
 <p style="padding-left: 30px;">下載 <a href="https://drive.google.com/file/d/1ZrLiGxB_aUFkH1TusgOdXaeWio4Tjbge/view?usp=sharing">robodk_rokisim.7z</a> (下載 434 MB, 解開壓縮後  1.2 GB)</p>
 <p style="padding-left: 30px;">下載 <a href="https://drive.google.com/file/d/1xPTJjhQR0GVIJbyhUwzrjzv5M-nbaenk/view?usp=sharing">msys2_and_cmake.7z</a> (下載 3.7 GB, 解開壓縮後  13.3 GB)</p>
 <p style="padding-left: 30px;">下載 <a href="https://drive.google.com/file/d/1D_8VZVzostVHOhzgv9HUbSFSpxNOYJe4/view?usp=sharing">coppeliasim_4.2_and_4.1.7z</a> (下載 566 MB, 解開壓縮後 1.5 GB )</p>
-<p style="padding-left: 30px;">下載 <a href="https://drive.google.com/file/d/1ArI6h4I8Y6qU0bu7hluw3CDlBZFMHYED/view?usp=sharing">Rust_1.58.1_portable.7z</a> (218 MB, 解開壓縮後 1.8 GB)</p>
+<p style="padding-left: 30px;">下載 <a href="https://drive.google.com/file/d/1ArI6h4I8Y6qU0bu7hluw3CDlBZFMHYED/view?usp=sharing">Rust_1.58.1_portable.7z</a> (下載 218 MB, 解開壓縮後 1.8 GB)</p>
+<p style="padding-left: 30px;">下載 <a href="https://drive.google.com/file/d/1v4i1y7C33dXPdmxjQ8RYA-zLNjXa0ZRM/view?usp=sharing">Miktex_portable.7z</a> (下載 286 MB, 解開壓縮後 1 GB)</p>
 <hr/>
 <h4>課程簡介:</h4>
 <p style="padding-left: 30px;">回到 1997 年, <a href="https://en.wikipedia.org/wiki/Google">Google</a> 成立的前一年, 看看 <a href="https://link.springer.com/book/10.1007/978-1-349-14456-3">Mastering the Internet</a> (1) 這本電子書, 了解與網際網路相關的各項術語與相關內容.</p>
@@ -39,8 +40,7 @@
 <p style="padding-left: 30px;">網際內容管理課程將配合上述 7 本電子書中的資料實際讓學員在 Windows 與 Ubuntu 環境中建立適合機械工程師使用的網際內容管理系統.</p>
 <h4>電腦輔助設計室與協同設計室行事曆</h4>
 <p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei">全頁檢視</a></p>
-<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
-<h2>Github</h2>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p><h2>Github</h2>
 <p>Github 是一套提供<span style="background-color: #ccffcc;">全球資訊網服務介面</span>的<span style="background-color: #ccffcc;">分散式版次管理系統</span>.</p>
 <p>全球資訊網服務介面: 可使用瀏覽器登入系統後維護內容</p>
 <p>分散式版次控制(管理)系統: distributed version control system</p>
@@ -494,7 +494,15 @@ doc["websocket"].bind("click", websocket.do)
 <p style="padding-left: 30px;"><a href="http://mde.tw/lab/content/Heroku.html">http://mde.tw/lab/content/Heroku.html</a></p>
 <p style="padding-left: 30px;"><a href="http://mde.tw/cp2020/content/Heroku.html">http://mde.tw/cp2020/content/Heroku.html</a></p>
 <p style="padding-left: 30px;"><a href="http://mde.tw/wcm2021/content/Heroku.html">http://mde.tw/wcm2021/content/Heroku.html</a></p>
-<h1>Programming</h1>
+<h2>Pandoc</h2>
+<p>LaTeX and PDF</p>
+<p>下載 <a href="https://drive.google.com/file/d/1v4i1y7C33dXPdmxjQ8RYA-zLNjXa0ZRM/view?usp=sharing">Miktex_portable.7z</a> (下載 286 MB, 解開壓縮後 1 GB)</p>
+<p>下列指令可以在可攜系統中, 利用 pandoc 與宋體字型將 content/About.html 轉為 About.pdf</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">pandoc About.html --pdf-engine=xelatex -o c:\tmp\About.pdf -V mainfont="SimSun"</pre>
+<p>由於 content/About.html 包含網頁中的表單與 footer 內容, 若能在 config/content.htm 分頁後, 按照各頁面的標題 (head) 與順序 (level), 將 html 轉為 pdf 並利用 sitemap 製作 Table of Content, 應該可以順利轉為 PDF 電子書格式.</p>
+<p>或者將上述 html 轉為 Markdown 後, 可再讓使用者編輯後, 透過 MikTeX 轉為 PDF 電子書格式.</p>
+<h4>參考:</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/chiamingyen/sphinxBook">https://github.com/chiamingyen/sphinxBook</a> </p><h1>Programming</h1>
 <h4><a href="https://github.com/mdecourse/wcm2022/discussions/5#discussion-3797589">計算機程式的教與學</a>:</h4>
 <p><a href="https://mde.tw/cp2021/content/%E5%AD%B8%E7%BF%92%E7%A8%8B%E5%BC%8F.html">學習程式</a></p>
 <p><a href="https://www.indiatoday.in/education-today/featurephilia/story/why-computer-programming-or-coding-is-so-important-for-students-in-today-s-era-1789171-2021-04-09">why-computer-programming-or-coding-is-so-important-for-students-in-today-s-era</a>?</p>
@@ -529,8 +537,7 @@ doc["websocket"].bind("click", websocket.do)
 <p style="padding-left: 30px;">usage should be non-commercial</p>
 <p>cd2022 downloads are provided by cd2022 At mde</p>
 <p><a href="https://drive.google.com/file/d/1ZkKa4rl0fsmqsMWegPWjSVUW__9PQ3yh/view?usp=sharing">CoppeliaSim Edu 4.1.0 Portable</a> (official and self-compiled versions)</p>
-<p><a href="https://drive.google.com/file/d/16tiFBeeV3OEwomioM9MQxQIUJwEyzcQy/view?usp=sharing">CoppeliaSim Edu 4.2.0 Portable</a> (official version)</p>
-<h2>Project2</h2>
+<p><a href="https://drive.google.com/file/d/16tiFBeeV3OEwomioM9MQxQIUJwEyzcQy/view?usp=sharing">CoppeliaSim Edu 4.2.0 Portable</a> (official version)</p><h2>Project2</h2>
 <p>讓 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 動態網站系統具備多人異地同步編輯的功能, 可以將目前的 TinyMCE4 編輯器改為 <a href="https://github.com/ckeditor/ckeditor5">ckeditor5</a>, 並且在區網或廣域網路時啟動 <a href="https://github.com/ckeditor/ckeditor5">ckeditor5</a> 的 realtime 同步編輯功能</p>
 <p>Flask and ckeditor4: <a href="https://github.com/greyli/flask-ckeditor">https://github.com/greyli/flask-ckeditor</a> (其他參考:<a href="https://www.codetd.com/en/article/9844870">1</a>, <a href="https://flask-ckeditor.readthedocs.io/en/latest/">2</a>)</p>
 <p>Flask and ckeditor5: <a href="https://github.com/boyuan12/note-web">https://github.com/boyuan12/note-web</a></p>
@@ -546,7 +553,14 @@ doc["websocket"].bind("click", websocket.do)
 <p><a href="https://github.com/mdecourse/conclave">https://github.com/mdecourse/conclave</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/jIR0Ngov7vo" title="YouTube video player" width="560"></iframe></p>
 <p><a href="https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html">https://digitalfreepen.com/2017/10/06/simple-real-time-collaborative-text-editor.html</a></p>
-<h2>Rust</h2>
+<h2>Project4</h2>
+<h4>參考:</h4>
+<p style="padding-left: 30px;"><a href="https://bmsleight.github.io/brython-blocks/">https://bmsleight.github.io/brython-blocks/</a> (<a href="https://github.com/bmsleight/brython-blocks">https://github.com/bmsleight/brython-blocks</a>) </p>
+<p style="padding-left: 30px;"><a href="https://github.com/chiamingyen/tetris">https://github.com/chiamingyen/tetris</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/techwithtim/Tetris-Game">https://github.com/techwithtim/Tetris-Game</a> </p>
+<p style="padding-left: 30px;"><a href="https://levelup.gitconnected.com/writing-tetris-in-python-2a16bddb5318">https://levelup.gitconnected.com/writing-tetris-in-python-2a16bddb5318</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/ondras/custom-tetris">https://github.com/ondras/custom-tetris</a> </p>
+<p>在 <a href="https://mde.tw/wcm2022/content/Brython.html">Brython 頁面</a>中, 寫一個俄羅斯方塊遊戲.</p><h2>Rust</h2>
 <p><a href="https://mde.tw/cp2021/content/Rust.html">https://mde.tw/cp2021/content/Rust.html</a></p>
 <p>從<a href="http://mde.tw/cmstemplate/content/%E5%8F%AF%E6%94%9C%E7%B3%BB%E7%B5%B1.html">可攜系統</a>下載 1.53.0 後, 以 rustup update 更新.</p>
 <p>更新後以 rustc --version 查詢目前的版本.</p>
@@ -622,8 +636,7 @@ ffi.cdef(s)
 C = ffi.dlopen("./rust_python/target/debug/square.dll")
 
 print(C.square(9))</pre>
-<p>執行 call_rust.py 後得到 81.</p>
-<h3>cmsrmde</h3>
+<p>執行 call_rust.py 後得到 81.</p><h3>cmsrmde</h3>
 <p>利用</p>
 <p><a href="https://docs.rs/soup/latest/soup/">https://docs.rs/soup/latest/soup/</a> 類似 Python 的 beautifulsoup.</p>
 <p>Rust 的 <a href="https://stackoverflow.com/questions/26643688/how-do-i-split-a-string-in-rust">split</a>.</p>
@@ -726,6 +739,13 @@ print(C.square(9))</pre>
 <p style="padding-left: 30px;">已經修過計算機概論的同學, 請以網站及 PDF 檔案格式整理出一份標題為"計算機概論"的資料內容.</p>
 <p style="padding-left: 30px;">不希望整理上述兩項主題的同學, 請自選主題, 以網站及 PDF 檔案格式整理出一份標題為"自選主題"的資料內容.</p>
 <h4>討論一:</h4>
+<p style="padding-left: 30px;">電腦軟硬體、網路與人工智能技術持續不斷進步下, 爾後的社會與工作環境將會朝哪一個方向發展?</p>
+<p style="padding-left: 60px;">自駕車即將出現的啟示是甚麼?</p>
+<p style="padding-left: 60px;">未來所謂的智能製造工廠大約是何種樣貌, 需要甚麼樣的人才?</p>
+<p style="padding-left: 60px;">產品生命週期不斷縮短下, 對技術及職業教育會造成何種影響?</p>
+<p style="padding-left: 90px;"><a href="https://www.rasmussen.edu/degrees/technology/blog/why-learn-to-code/">這一篇文章</a>在講甚麼?</p>
+<p style="padding-left: 90px;">台灣是個各種物產非常豐富的國家嗎?所製造開發的產品輸往哪裡?</p>
+<p style="padding-left: 120px;">英文與電腦教育對台灣重要嗎?</p>
 <p style="padding-left: 30px;">為何要採用網站整理資料內容?</p>
 <p style="padding-left: 30px;">為何要採用 PDF 整理資料內容?</p>
 <p style="padding-left: 30px;">有沒有比利用 Github Pages 整理網站資料更有效率的方法?</p>
