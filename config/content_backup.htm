@@ -31,6 +31,7 @@
 <p style="padding-left: 60px;">利用商用 CAD 建立網際設計自動化接案系統:</p>
 <p style="padding-left: 90px;"><a href="https://www.driveworkslive.com/">https://www.driveworkslive.com/</a></p>
 <p style="padding-left: 90px;"><a href="https://github.com/DriveWorks">https://github.com/DriveWorks</a></p>
+<p style="padding-left: 90px;"><a href="/downloads/2013_web_based_customized Design.pdf">web_based_customized Design.pdf</a></p>
 <p style="padding-left: 60px;">利用開源 CAD 建立 3D 模型, 執行輔助設計及轉檔:</p>
 <p style="padding-left: 90px;"><a href="https://github.com/coletek/pyMDA">https://github.com/coletek/pyMDA</a></p>
 <p style="padding-left: 90px;"><a href="https://github.com/KmolYuan/Pyslvs-UI">https://github.com/KmolYuan/Pyslvs-UI</a></p>
@@ -560,7 +561,69 @@ doc["websocket"].bind("click", websocket.do)
 <p style="padding-left: 30px;"><a href="https://github.com/techwithtim/Tetris-Game">https://github.com/techwithtim/Tetris-Game</a></p>
 <p style="padding-left: 30px;"><a href="https://levelup.gitconnected.com/writing-tetris-in-python-2a16bddb5318">https://levelup.gitconnected.com/writing-tetris-in-python-2a16bddb5318</a></p>
 <p style="padding-left: 30px;"><a href="https://github.com/ondras/custom-tetris">https://github.com/ondras/custom-tetris</a></p>
-<p>在 <a href="https://mde.tw/wcm2022/content/Brython.html">Brython 頁面</a>中, 寫一個俄羅斯方塊遊戲.</p><h2>Rust</h2>
+<p>在 <a href="https://mde.tw/wcm2022/content/Brython.html">Brython 頁面</a>中, 寫一個俄羅斯方塊遊戲.</p><h2>Project5</h2>
+<p>能不能在 <a href="https://mde.tw/wcm2022/content/Brython.html">https://mde.tw/wcm2022/content/Brython.html</a> 的程式編輯器中, 讓使用者將 Python 程式透過 <a href="https://mde.tw/wcm2022/content/Heroku.html">Heroku</a> 選擇將程式存在近端與選定的 <a href="https://towardsdatascience.com/gistyc-a-python-based-github-gist-management-toolkit-ee507d5a0e7b">Gist</a> 上.</p>
+<p>並且配合與上述網際程式編輯環境搭配的 GUI 程式套件, 以 <a href="https://pygobject.readthedocs.io/en/latest/index.html">PyGObject</a> 開發.</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/Ko0NTS0IpfI" title="YouTube video player" width="560"></iframe></p>
+<h4>Install PyGObject on Windows (要在 IPv4 網路連線下執行):</h4>
+<ol>
+<li>Run Y:\msys64_20210419\mingw64.exe</li>
+<li>Execute pacman -Suy</li>
+<li>Execute pacman -S mingw-w64-x86_64-gtk3 mingw-w64-x86_64-python3 mingw-w64-x86_64-python3-gobject</li>
+<li>安裝結束後, 複製一份 y:\wscite502 名稱定為 y:\wscite502_msys2, 然後修改 python.properties 將 pythonw 指向 msys2 目錄中所安裝的 Python.</li>
+</ol>
+<p>python.properties 修改 line 152-157:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
+	python.command=Y:\msys64_20210419\mingw64\bin\pythonw
+if PLAT_GTK
+	python.command=python3
+if PLAT_MAC
+	python.command=python</pre>
+<p>測試執行 gtk_ex1.py</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import gi
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+
+win = Gtk.Window()
+win.connect("destroy", Gtk.main_quit)
+win.show_all()
+Gtk.main()</pre>
+<h4>button_hello.py</h4>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import gi
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+
+class MyWindow(Gtk.Window):
+    def __init__(self):
+        super().__init__(title="Hello World")
+
+        self.button = Gtk.Button(label="Click Here")
+        self.button.connect("clicked", self.on_button_clicked)
+        self.add(self.button)
+    def on_button_clicked(self, widget):
+        print("Hello World!")
+ 
+win = MyWindow()
+win.connect("destroy", Gtk.main_quit)
+win.show_all()
+Gtk.main()</pre>
+<p>pacman -S mingw-w64-x86_64-python3-yaml</p>
+<p>pacman -S mingw-w64-x86_64-python3-matplotlib</p>
+<p>pacman -S mingw-w64-x86_64-python3-pandas</p>
+<p>pacman -S mingw-w64-x86_64-python3-scipy</p>
+<p>pacman -S mingw-w64-x86_64-python3-numpy</p>
+<p>pacman -S mingw-w64-x86_64-cython</p>
+<p>pip3 install scikit-sparse</p>
+<p>pacman -S mingw-w64-x86_64-suitesparse</p>
+<h4>參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-4179-0">Foundations of PyGTK Development</a> (電子書)</p>
+<p style="padding-left: 30px;"><a href="https://pygobject.readthedocs.io/en/latest/">https://pygobject.readthedocs.io/en/latest/</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/sobot-rimulator">https://github.com/mdecourse/sobot-rimulator</a> (<a href="/downloads/sobot-rimulator.7z">sobot-rimulator.7z</a>)</p>
+<p style="padding-left: 30px;"><a href="https://python-gtk-3-tutorial.readthedocs.io/en/latest/">https://python-gtk-3-tutorial.readthedocs.io/en/latest/</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/snakeGTK.7z">snake in GTK.7z</a> (<a href="https://github.com/mdecourse/pyGTKDevelop">source code</a>)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/gaphor/gaphor">https://github.com/gaphor/gaphor</a></p><h2>Rust</h2>
 <p><a href="https://mde.tw/cp2021/content/Rust.html">https://mde.tw/cp2021/content/Rust.html</a></p>
 <p>從<a href="http://mde.tw/cmstemplate/content/%E5%8F%AF%E6%94%9C%E7%B3%BB%E7%B5%B1.html">可攜系統</a>下載 1.53.0 後, 以 rustup update 更新.</p>
 <p>更新後以 rustc --version 查詢目前的版本.</p>
@@ -740,7 +803,9 @@ print(C.square(9))</pre>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ERItSiC7uMs" title="YouTube video player" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/J1k9GTmYwkc" title="YouTube video player" width="560"></iframe></p>
 <p><a href="https://github.com/gaphor/gaphor">https://github.com/gaphor/gaphor</a></p>
-<p><a href="https://gaphor.org/download.html">https://gaphor.org/download.html</a></p><h2>Assignment</h2>
+<p><a href="https://gaphor.org/download.html">https://gaphor.org/download.html</a></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/Ko0NTS0IpfI" title="YouTube video player" width="560"></iframe></p>
+<p><a href="https://pygobject.readthedocs.io/en/latest/index.html">https://pygobject.readthedocs.io/en/latest/index.html</a></p><h2>Assignment</h2>
 <h4>作業一:</h4>
 <p style="padding-left: 30px;">已經修過計算機程式的同學, 請以網站及 PDF 檔案格式整理出一份標題為"計算機程式簡介"的資料內容.</p>
 <p style="padding-left: 30px;">已經修過計算機概論的同學, 請以網站及 PDF 檔案格式整理出一份標題為"計算機概論"的資料內容.</p>
