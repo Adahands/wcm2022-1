@@ -571,6 +571,7 @@ doc["websocket"].bind("click", websocket.do)
 <li>Execute pacman -Suy</li>
 <li>Execute pacman -S mingw-w64-x86_64-gtk3 mingw-w64-x86_64-python3 mingw-w64-x86_64-python3-gobject</li>
 <li>安裝結束後, 複製一份 y:\wscite502 名稱定為 y:\wscite502_msys2, 然後修改 python.properties 將 pythonw 指向 msys2 目錄中所安裝的 Python.</li>
+<li>假如要使用 <a href="https://glade.gnome.org/">glade</a>: pacman -S mingw-w64-x86_64-glade</li>
 </ol>
 <p>python.properties 修改 line 152-157:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
@@ -615,20 +616,31 @@ Gtk.main()</pre>
 <p>pacman -S mingw-w64-x86_64-python3-scipy</p>
 <p>pacman -S mingw-w64-x86_64-python3-numpy</p>
 <p>pacman -S mingw-w64-x86_64-cython</p>
-<p>pip3 install scikit-sparse</p>
+<p>pip3 install scikit-sparse (error)</p>
 <p>pacman -S mingw-w64-x86_64-suitesparse</p>
+<p>from sksparse.cholmod import cholesky<br/>ModuleNotFoundError: No module named 'sksparse'</p>
+<p><a href="https://github.com/mdecourse/sobotrimulator">https://github.com/mdecourse/sobotrimulator</a></p>
 <h4>參考:</h4>
+<p style="padding-left: 30px;"><a href="https://www.twblogs.net/c/5b8d958e2b717718833f2261/">PyGObject Tutorial</a></p>
+<p style="padding-left: 30px;"><a href="https://en.wikipedia.org/wiki/PyGTK">https://en.wikipedia.org/wiki/PyGTK</a></p>
 <p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-4179-0">Foundations of PyGTK Development</a> (電子書)</p>
 <p style="padding-left: 30px;"><a href="https://pygobject.readthedocs.io/en/latest/">https://pygobject.readthedocs.io/en/latest/</a></p>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecourse/sobot-rimulator">https://github.com/mdecourse/sobot-rimulator</a> (<a href="/downloads/sobot-rimulator.7z">sobot-rimulator.7z</a>)</p>
 <p style="padding-left: 30px;"><a href="https://python-gtk-3-tutorial.readthedocs.io/en/latest/">https://python-gtk-3-tutorial.readthedocs.io/en/latest/</a></p>
 <p style="padding-left: 30px;"><a href="/downloads/snakeGTK.7z">snake in GTK.7z</a> (<a href="https://github.com/mdecourse/pyGTKDevelop">source code</a>)</p>
-<p style="padding-left: 30px;"><a href="https://github.com/gaphor/gaphor">https://github.com/gaphor/gaphor</a></p><h2>Rust</h2>
+<p style="padding-left: 30px;"><a href="https://github.com/pychess/pychess">https://github.com/pychess/pychess</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/facebookresearch/pyrobot">https://github.com/facebookresearch/pyrobot</a></p>
+<p style="padding-left: 30px;"><a href="https://glade.gnome.org/">https://glade.gnome.org/</a></p>
+<p style="padding-left: 30px;"><a href="https://gtk-rs.org/">https://gtk-rs.org/</a>  (<a href="https://gtk-rs.org/gtk4-rs/stable/latest/book/">https://gtk-rs.org/gtk4-rs/stable/latest/book/</a>)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/gaphor/gaphor">https://github.com/gaphor/gaphor</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/opendr-eu/opendr">https://github.com/opendr-eu/opendr</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/opendr-eu/gym-airsim">https://github.com/opendr-eu/gym-airsim</a></p><h2>Rust</h2>
 <p><a href="https://mde.tw/cp2021/content/Rust.html">https://mde.tw/cp2021/content/Rust.html</a></p>
 <p>從<a href="http://mde.tw/cmstemplate/content/%E5%8F%AF%E6%94%9C%E7%B3%BB%E7%B5%B1.html">可攜系統</a>下載 1.53.0 後, 以 rustup update 更新.</p>
 <p>更新後以 rustc --version 查詢目前的版本.</p>
 <p>下載 <a href="https://drive.google.com/file/d/1ArI6h4I8Y6qU0bu7hluw3CDlBZFMHYED/view?usp=sharing">Rust_1.58.1_portable.7z</a> (218 MB, 解開壓縮後 1.8 GB)</p>
 <p>可配合</p>
+<p style="padding-left: 30px;"><a href="https://fasterthanli.me/articles/a-half-hour-to-learn-rust">https://fasterthanli.me/articles/a-half-hour-to-learn-rust</a> </p>
 <p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-3468-6">Beginning Rust</a></p>
 <p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-5599-5">Practical Rust Projects</a></p>
 <p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-5121-8">Practical Machine Learning with Rust</a></p>
@@ -708,7 +720,40 @@ print(C.square(9))</pre>
 <p>SciTE 可以利用 <a href="https://fossies.org/linux/gscite/rust.properties">https://fossies.org/linux/gscite/rust.properties</a> 納入對於 Rust 的支持.</p>
 <p>Flask 的部分可以改用 Web Framework: <a href="https://github.com/actix/actix-web">https://github.com/actix/actix-web</a></p>
 <h1>Network</h1>
-<h2>Internet</h2>
+<p>From <a href="https://www.thousandeyes.com/learning/techtorials/ipv4-vs-ipv6">IPv4 vs IPv6</a>:</p>
+<p><a href="https://link.springer.com/book/10.1007/b135746">Understanding IPv6</a> 電子書</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4302-6371-5">Practical IPv6 for Windows Administrator</a> 電子書</p>
+<h4>What is IPv6?</h4>
+<p>IPv6 is the next generation Internet Protocol (IP) address standard intended to supplement and eventually replace IPv4, the protocol many Internet services still use today. Every computer, mobile phone, home automation component, IoT sensor and any other device connected to the Internet needs a numerical IP address to communicate between other devices. The original IP address scheme, called IPv4, is running out of addresses due to its widespread usage from the proliferation of so many connected devices.</p>
+<h4>What is IPv4?</h4>
+<p>IPv4 stands for Internet Protocol version 4. It is the underlying technology that makes it possible for us to connect our devices to the web. Whenever a device accesses the Internet, it is assigned a unique, numerical IP address such as 99.48.227.227. To send data from one computer to another through the web, a data packet must be transferred across the network containing the IP addresses of both devices.</p>
+<p>Why Support IPv6? What are the benefits of IPv6?</p>
+<p>IPv6 (Internet Protocol version 6) is the sixth revision to the Internet Protocol and the successor to IPv4. It functions similarly to IPv4 in that it provides the unique IP addresses necessary for Internet-enabled devices to communicate. However, it does have one significant difference: it utilizes a 128-bit IP address.</p>
+<h4>Key benefits to IPv6 include:</h4>
+<ol>
+<li>No more NAT (<a href="https://en.wikipedia.org/wiki/Network_address_translation">Network Address Translation</a>) - 不再需要網路位址轉換 (因為有非常充足的網路位址數量)</li>
+<li>Auto-configuration - 可自動配置</li>
+<li>No more private address collisions - 內部網路位址不再會產生衝突</li>
+<li>Better multicast routing - 更好的多播路由</li>
+<li>Simpler header format - 更簡單的標頭格式</li>
+<li>Simplified, more efficient routing - 簡化且更具效率的路由</li>
+<li>True quality of service (QoS), also called "flow labeling" - 真實的服務品質 (更能保障點對點的網路連通機率)</li>
+<li>Built-in authentication and privacy support - 內建身分驗證與隱私支援</li>
+<li>Flexible options and extensions - 彈性選項與延伸</li>
+<li>Easier administration (no more DHCP) - 更容易管理 (無需 <a href="https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol">DHCP</a>)</li>
+</ol>
+<p>IPv4 uses a 32-bit address for its Internet addresses. That means it can provide support for 2^32 IP addresses in total around 4.29 billion. That may seem like a lot, but all 4.29 billion IP addresses have now been assigned, leading to the address shortage issues we face today. (IPv4 uses 32-bit identifier so that there are 4.3 billion identifiers numerically, but address allocation based on classes allows only 0.5 or 1 billion address space).</p>
+<p>There are 2^128 or 340 trillion (兆=百萬平方=10^12), trillion, trillion IPv6 addresses, which is more than 100 times the number of atoms on the surface of the Earth. This will be more than sufficient to support trillions of Internet devices for the forseeable future.</p>
+<p>The differences between DHCP and DHCPv6 are that DHCPv6 uses Unique Identifiers, while DHCP uses MAC addresses to identify the client. DHCP messages are transmitted over IPv4 packets and DHCPv6 is transmitted over IPv6 packets. DHCPv6 uses Router Advertisement (RA) and IPv6 multicast messages and DHCP uses broadcast IPv4 messages on the LAN.</p>
+<h4>Autoconfiguration</h4>
+<p>The autoconfiguration is the most fascinating point in adopting IPv6. IPv6 enabled device is able to configure itself dynamically when it plugs in. IPv6 interface is given with several identifiers in accordance with scope or number of receivers, such as link-local address, global address, multicast address, anycast address, and so on. When an IPv6 device boots, it automatically configures its link-local address with several multicast addresses and gets or builds its global IP address.</p>
+<h4>Providing Quality of Service (QoS)</h4>
+<p>To provide quality of service in data transmissions, the flow label is defined in IPv6. Flow labels are pre-defined labels to classify data packets to settle quality requests from communicating peers. Type of Service (ToS) field in IPv4 Header format is defined for the similar purpose. However, most IPv4 routers do not support this field. Thus, Integrated Services (Int-Serv) and Differentiated Services (Diff-Serv) are devised to support QoS in IP networks. For end-to-end QoS support, all the routers on the path from the sender to the receiver must support QoS mechanism. However, in IPv4, these schemes meet difficulty in widely deployed. All the IPv6 routers must support IPv6 QoS mechanisms. Diff-Serv is one of the methods which are currently under consideration for the flow label.</p>
+<h4>Integrated security</h4>
+<p>For the network security in IPv4, IPsec is devised. It is widely used for the Virtual Private Network (VPN). However, its support is optional in IPv4. IPsec is mandatory in IPv6.</p>
+<h4>Enhanced mobility</h4>
+<p>Route optimization is possible in the Mobile IPv6. Authentication mechanisms for the mobile node are provided in route optimization process.</p>
+<p></p><h2>Internet</h2>
 <p>Inter-Networks</p>
 <p><a href="https://en.wikipedia.org/wiki/Internet">https://en.wikipedia.org/wiki/Internet</a></p>
 <p>回到 1997 年, <a href="https://en.wikipedia.org/wiki/Google">Google</a> 成立的前一年, 看看 <a href="https://link.springer.com/book/10.1007/978-1-349-14456-3">Mastering the Internet</a> (1) 這本電子書, 了解與網際網路相關的各項術語與相關內容.</p>

@@ -140,7 +140,41 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">cmsrmde << <a href='cmsrmde.html'>Previous</a> <a href='Internet.html'>Next</a> >> Internet<br /><h1>Network</h1>
-<br />cmsrmde << <a href='cmsrmde.html'>Previous</a> <a href='Internet.html'>Next</a> >> Internet</div>
+<p>綜合第一工程館八樓電腦輔助設計室 Windows 10 網路設定: <a href="https://github.com/mdecourse/wcm2022/discussions/2">https://github.com/mdecourse/wcm2022/discussions/2</a> (使用純 IPv6 網路設定說明)</p>
+<p>From <a href="https://www.thousandeyes.com/learning/techtorials/ipv4-vs-ipv6">IPv4 vs IPv6</a>:</p>
+<p><a href="https://link.springer.com/book/10.1007/b135746">Understanding IPv6</a> 電子書</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4302-6371-5">Practical IPv6 for Windows Administrator</a> 電子書</p>
+<h4>What is IPv6?</h4>
+<p>IPv6 is the next generation Internet Protocol (IP) address standard intended to supplement and eventually replace IPv4, the protocol many Internet services still use today. Every computer, mobile phone, home automation component, IoT sensor and any other device connected to the Internet needs a numerical IP address to communicate between other devices. The original IP address scheme, called IPv4, is running out of addresses due to its widespread usage from the proliferation of so many connected devices.</p>
+<h4>What is IPv4?</h4>
+<p>IPv4 stands for Internet Protocol version 4. It is the underlying technology that makes it possible for us to connect our devices to the web. Whenever a device accesses the Internet, it is assigned a unique, numerical IP address such as 99.48.227.227. To send data from one computer to another through the web, a data packet must be transferred across the network containing the IP addresses of both devices.</p>
+<p>Why Support IPv6? What are the benefits of IPv6?</p>
+<p>IPv6 (Internet Protocol version 6) is the sixth revision to the Internet Protocol and the successor to IPv4. It functions similarly to IPv4 in that it provides the unique IP addresses necessary for Internet-enabled devices to communicate. However, it does have one significant difference: it utilizes a 128-bit IP address.</p>
+<h4>Key benefits to IPv6 include:</h4>
+<ol>
+<li>No more NAT (<a href="https://en.wikipedia.org/wiki/Network_address_translation">Network Address Translation</a>) - 不再需要網路位址轉換 (因為有非常充足的網路位址數量)</li>
+<li>Auto-configuration - 可自動配置</li>
+<li>No more private address collisions - 內部網路位址不再會產生衝突</li>
+<li>Better multicast routing - 更好的多播路由</li>
+<li>Simpler header format - 更簡單的標頭格式</li>
+<li>Simplified, more efficient routing - 簡化且更具效率的路由</li>
+<li>True quality of service (QoS), also called "flow labeling" - 真實的服務品質 (更能保障點對點的網路連通機率)</li>
+<li>Built-in authentication and privacy support - 內建身分驗證與隱私支援</li>
+<li>Flexible options and extensions - 彈性選項與延伸</li>
+<li>Easier administration (no more DHCP) - 更容易管理 (無需 <a href="https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol">DHCP</a>)</li>
+</ol>
+<p>IPv4 uses a 32-bit address for its Internet addresses. That means it can provide support for 2^32 IP addresses in total around 4.29 billion. That may seem like a lot, but all 4.29 billion IP addresses have now been assigned, leading to the address shortage issues we face today. (IPv4 uses 32-bit identifier so that there are 4.3 billion identifiers numerically, but address allocation based on classes allows only 0.5 or 1 billion address space).</p>
+<p>There are 2^128 or 340 trillion (兆=百萬平方=10^12), trillion, trillion IPv6 addresses, which is more than 100 times the number of atoms on the surface of the Earth. This will be more than sufficient to support trillions of Internet devices for the forseeable future.</p>
+<p>The differences between DHCP and DHCPv6 are that DHCPv6 uses Unique Identifiers, while DHCP uses MAC addresses to identify the client. DHCP messages are transmitted over IPv4 packets and DHCPv6 is transmitted over IPv6 packets. DHCPv6 uses Router Advertisement (RA) and IPv6 multicast messages and DHCP uses broadcast IPv4 messages on the LAN.</p>
+<h4>Autoconfiguration</h4>
+<p>The autoconfiguration is the most fascinating point in adopting IPv6. IPv6 enabled device is able to configure itself dynamically when it plugs in. IPv6 interface is given with several identifiers in accordance with scope or number of receivers, such as link-local address, global address, multicast address, anycast address, and so on. When an IPv6 device boots, it automatically configures its link-local address with several multicast addresses and gets or builds its global IP address.</p>
+<h4>Providing Quality of Service (QoS)</h4>
+<p>To provide quality of service in data transmissions, the flow label is defined in IPv6. Flow labels are pre-defined labels to classify data packets to settle quality requests from communicating peers. Type of Service (ToS) field in IPv4 Header format is defined for the similar purpose. However, most IPv4 routers do not support this field. Thus, Integrated Services (Int-Serv) and Differentiated Services (Diff-Serv) are devised to support QoS in IP networks. For end-to-end QoS support, all the routers on the path from the sender to the receiver must support QoS mechanism. However, in IPv4, these schemes meet difficulty in widely deployed. All the IPv6 routers must support IPv6 QoS mechanisms. Diff-Serv is one of the methods which are currently under consideration for the flow label.</p>
+<h4>Integrated security</h4>
+<p>For the network security in IPv4, IPsec is devised. It is widely used for the Virtual Private Network (VPN). However, its support is optional in IPv4. IPsec is mandatory in IPv6.</p>
+<h4>Enhanced mobility</h4>
+<p>Route optimization is possible in the Mobile IPv6. Authentication mechanisms for the mobile node are provided in route optimization process.</p>
+<p></p><br />cmsrmde << <a href='cmsrmde.html'>Previous</a> <a href='Internet.html'>Next</a> >> Internet</div>
         
     <!-- footer -->
       <div class="container">
