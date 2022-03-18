@@ -1,0 +1,264 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>wcm2022</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 -->
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container-fluid'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>wcm2022 網際內容管理</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">wcm2022 網際內容管理</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Disqus.html'>Disqus</a><li><a href='Github.html'>Github</a><li><a href='WCM.html'>WCM</a><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='ggame.html'>ggame</a></li></ul><li><a href='Heroku.html'>Heroku</a><li><a href='Pandoc.html'>Pandoc</a><li><a href='Blender.html'>Blender</a></li></ul><li class='has-children'><a href='Programming.html'>Programming</a><ul class='dropdown'><li><a href='Project2.html'>Project2</a><li><a href='Project3.html'>Project3</a><li><a href='PyGObject.html'>PyGObject</a><li><a href='Tetris.html'>Tetris</a><li class='has-children'><a href='Rust.html'>Rust</a><ul class='dropdown'><li><a href='cmsrmde.html'>cmsrmde</a></li></li></ul></ul><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li class='has-children'><a href='Internet.html'>Internet</a><ul class='dropdown'><li><a href='WWW.html'>WWW</a><li><a href='HTML.html'>HTML</a><li><a href='TCPIP.html'>TCPIP</a></li></ul><li><a href='Windows.html'>Windows</a><li><a href='Ubuntu.html'>Ubuntu</a><li class='has-children'><a href='Git.html'>Git</a><ul class='dropdown'><li><a href='Project1.html'>Project1</a></li></ul><li><a href='Fossil.html'>Fossil</a></li></ul><li class='has-children'><a href='Collaboration.html'>Collaboration</a><ul class='dropdown'><li><a href='Assignment.html'>Assignment</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Project3 << <a href='Project3.html'>Previous</a> <a href='Tetris.html'>Next</a> >> Tetris<br /><h1>PyGObject</h1>
+<p></p>
+<h4>Install PyGObject on Windows (要在 IPv4 網路連線下執行):</h4>
+<ol>
+<li>Run Y:\msys64_20210419\mingw64.exe</li>
+<li>Execute pacman -Suy</li>
+<li>Execute pacman -S mingw-w64-x86_64-gtk3 mingw-w64-x86_64-python3 mingw-w64-x86_64-python3-gobject</li>
+<li>安裝結束後, 複製一份 y:\wscite502 名稱定為 y:\wscite502_msys2, 然後修改 python.properties 將 pythonw 指向 msys2 目錄中所安裝的 Python.</li>
+<li>假如要使用 <a href="https://glade.gnome.org/">glade</a>: pacman -S mingw-w64-x86_64-glade</li>
+</ol>
+<p>python.properties 修改 line 152-157:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">if PLAT_WIN
+	python.command=Y:\msys64_20210419\mingw64\bin\pythonw
+if PLAT_GTK
+	python.command=python3
+if PLAT_MAC
+	python.command=python</pre>
+<p>測試執行 gtk_ex1.py</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import gi
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+
+win = Gtk.Window()
+win.connect("destroy", Gtk.main_quit)
+win.show_all()
+Gtk.main()</pre>
+<h4>button_hello.py</h4>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import gi
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+
+class MyWindow(Gtk.Window):
+    def __init__(self):
+        super().__init__(title="Hello World")
+
+        self.button = Gtk.Button(label="Click Here")
+        self.button.connect("clicked", self.on_button_clicked)
+        self.add(self.button)
+    def on_button_clicked(self, widget):
+        print("Hello World!")
+ 
+win = MyWindow()
+win.connect("destroy", Gtk.main_quit)
+win.show_all()
+Gtk.main()</pre>
+<p>pacman -S mingw-w64-x86_64-python3-yaml</p>
+<p>pacman -S mingw-w64-x86_64-python3-matplotlib</p>
+<p>pacman -S mingw-w64-x86_64-python3-pandas</p>
+<p>pacman -S mingw-w64-x86_64-python3-scipy</p>
+<p>pacman -S mingw-w64-x86_64-python3-numpy</p>
+<p>pacman -S mingw-w64-x86_64-cython</p>
+<p>pip3 install scikit-sparse (error)</p>
+<p>pacman -S mingw-w64-x86_64-suitesparse</p>
+<p>from sksparse.cholmod import cholesky<br/>ModuleNotFoundError: No module named 'sksparse'</p>
+<p><a href="https://github.com/mdecourse/sobotrimulator">https://github.com/mdecourse/sobotrimulator</a></p>
+<h4>參考:</h4>
+<p style="padding-left: 30px;"><a href="https://www.twblogs.net/c/5b8d958e2b717718833f2261/">PyGObject Tutorial</a></p>
+<p style="padding-left: 30px;"><a href="https://en.wikipedia.org/wiki/PyGTK">https://en.wikipedia.org/wiki/PyGTK</a></p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-4179-0">Foundations of PyGTK Development</a> (電子書)</p>
+<p style="padding-left: 30px;"><a href="https://pygobject.readthedocs.io/en/latest/">https://pygobject.readthedocs.io/en/latest/</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/sobot-rimulator">https://github.com/mdecourse/sobot-rimulator</a> (<a href="./../downloads/sobot-rimulator.7z">sobot-rimulator.7z</a>)</p>
+<p style="padding-left: 30px;"><a href="https://python-gtk-3-tutorial.readthedocs.io/en/latest/">https://python-gtk-3-tutorial.readthedocs.io/en/latest/</a></p>
+<p style="padding-left: 30px;"><a href="./../downloads/snakeGTK.7z">snake in GTK.7z</a> (<a href="https://github.com/mdecourse/pyGTKDevelop">source code</a>)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/pychess/pychess">https://github.com/pychess/pychess</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/facebookresearch/pyrobot">https://github.com/facebookresearch/pyrobot</a></p>
+<p style="padding-left: 30px;"><a href="https://glade.gnome.org/">https://glade.gnome.org/</a></p>
+<p style="padding-left: 30px;"><a href="https://gtk-rs.org/">https://gtk-rs.org/</a>  (<a href="https://gtk-rs.org/gtk4-rs/stable/latest/book/">https://gtk-rs.org/gtk4-rs/stable/latest/book/</a>)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/gaphor/gaphor">https://github.com/gaphor/gaphor</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/opendr-eu/opendr">https://github.com/opendr-eu/opendr</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/opendr-eu/gym-airsim">https://github.com/opendr-eu/gym-airsim</a></p>
+<br />Project3 << <a href='Project3.html'>Previous</a> <a href='Tetris.html'>Next</a> >> Tetris</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
